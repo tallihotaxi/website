@@ -1,83 +1,247 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TallyHo Taxi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TallyHo Taxi • Maine Coastal Rides & Airport Transfers</title>
+  <meta name="description" content="TallyHo Taxi — 17 years experience. Coastal rides, local & long distance, airport transfers to BOS Logan, PWM Portland Jetport, BGR Bangor. Proudly serving Maine. Call 1-800-466-7775." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Pacifico&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --navy:#0a1a2a;       /* deep ocean */
+      --navy-2:#0f2236;     /* card bg */
+      --sea:#67e8f9;        /* accent aqua */
+      --sea-2:#93c5fd;      /* soft blue */
+      --foam:#ffffff;       /* white */
+      --beacon:#ef4444;     /* lighthouse red */
+    }
+    body{font-family: 'Outfit', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;}
+    .logo-script{font-family:'Pacifico', cursive}
+    .glass{backdrop-filter:saturate(140%) blur(8px); background:rgba(13,31,51,.6)}
+  </style>
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "TallyHo Taxi",
+    "areaServed": "Maine, USA",
+    "telephone": "+1-800-466-7775",
+    "url": "https://example.com",
+    "description": "Coastal rides and airport transfers. 17 years experience. Serving local and long distance, all Maine coastal towns, and airports including Boston Logan, Portland Jetport, and Bangor International.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Coastal Rides"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Airport Transfers"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Local & Long Distance"}}
+      ]
+    }
+  }
+  </script>
 </head>
-<body class="bg-[#0a1a2a] text-white">
+<body class="bg-[var(--navy)] text-white">
+  <!-- Top Bar -->
+  <div class="w-full bg-[var(--navy)]/90 border-b border-sky-400/20">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-2 text-sm text-sky-200">
+      <p>Proud to serve the great state of Maine!</p>
+      <a href="tel:18004667775" class="inline-flex items-center gap-2 font-semibold text-white px-3 py-1 rounded-xl bg-sky-500 hover:bg-sky-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 12.73 12.73 0 003.99.64 1 1 0 011 1V21a1 1 0 01-1 1A18 18 0 013 4a1 1 0 011-1h3.42a1 1 0 011 1 12.73 12.73 0 00.64 3.99 1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
+        <span>Call 1‑800‑466‑7775</span>
+      </a>
+    </div>
+  </div>
 
-  <!-- Header -->
-  <header class="bg-[#0a1a2a] border-b border-blue-400">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-3xl font-extrabold text-red-500">TallyHo Taxi</h1>
-      <nav class="space-x-6 text-lg">
-        <a href="#services" class="hover:text-red-400">Services</a>
-        <a href="#about" class="hover:text-red-400">About</a>
-        <a href="#contact" class="hover:text-red-400">Contact</a>
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-40 bg-[var(--navy)]/70 backdrop-blur border-b border-sky-400/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <!-- Recreated SVG Logo -->
+        <div class="relative w-12 h-12">
+          <svg viewBox="0 0 120 120" class="absolute inset-0" aria-hidden="true">
+            <!-- Waves -->
+            <path d="M5 85c10 0 10-10 20-10s10 10 20 10 10-10 20-10 10 10 20 10 10-10 20-10" stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <path d="M5 95c10 0 10-10 20-10s10 10 20 10 10-10 20-10 10 10 20 10 10-10 20-10" stroke="#e0f2fe" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <!-- Lighthouse Base -->
+            <g transform="translate(50,22)">
+              <rect x="6" y="32" width="12" height="26" fill="#f3f4f6" stroke="#0b1220" stroke-width="2"/>
+              <path d="M12 0 L22 10 L12 20 L2 10 Z" fill="#ef4444" stroke="#0b1220" stroke-width="2"/>
+              <rect x="4" y="10" width="16" height="12" rx="2" fill="#e5e7eb" stroke="#0b1220" stroke-width="2"/>
+              <circle cx="12" cy="16" r="3" fill="#0b1220"/>
+            </g>
+            <!-- Seagulls -->
+            <path d="M18 40c6-6 12-6 18 0M84 36c6-6 12-6 18 0" stroke="#e0f2fe" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="leading-tight">
+          <div class="logo-script text-2xl text-white">TallyHo Taxi</div>
+          <div class="text-sky-300 text-xs tracking-wide">Coastal Rides • Airport Transfers</div>
+        </div>
+      </div>
+      <nav class="hidden sm:flex items-center gap-6 text-sky-100">
+        <a href="#services" class="hover:text-white">Services</a>
+        <a href="#coverage" class="hover:text-white">Coverage</a>
+        <a href="#fleet" class="hover:text-white">Fleet</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="text-center py-16 bg-gradient-to-b from-[#0a1a2a] to-[#122b44]">
-    <h2 class="text-5xl font-extrabold text-red-500 mb-4 drop-shadow-lg">Ride with TallyHo Taxi</h2>
-    <p class="text-xl text-blue-200">Serving the coast with reliable and friendly service</p>
-    <div class="mt-8 flex justify-center">
-      <img src="YOUR-VEHICLE-IMAGE.jpg" alt="TallyHo Taxi Vehicle" class="rounded-xl shadow-2xl border-4 border-blue-400 max-w-lg">
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-sky-900/40 to-sky-700/10 pointer-events-none"></div>
+    <div class="max-w-6xl mx-auto px-4 py-16 sm:py-24 relative">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight"><span class="text-white">Ride the Coast with</span> <span class="logo-script text-[var(--sea)]">TallyHo Taxi</span></h1>
+          <p class="mt-4 text-lg text-sky-200">17 years of safe, reliable transportation across Maine — from local hops to scenic coastal drives and stress‑free airport transfers.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="tel:18004667775" class="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-[var(--beacon)] hover:bg-red-500 text-white font-semibold shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 12.73 12.73 0 003.99.64 1 1 0 011 1V21a1 1 0 01-1 1A18 18 0 013 4a1 1 0 011-1h3.42a1 1 0 011 1 12.73 12.73 0 00.64 3.99 1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
+              Call Now: 1‑800‑466‑7775
+            </a>
+            <span class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl border border-sky-400/40 text-sky-100">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.546 4.758L18.5 7.5l-3.954 2.742L13.546 15 12 10.242 10.454 15l-1-4.758L5.5 7.5l4.954-.742L12 2z"/></svg>
+              No accidents • No violations
+            </span>
+          </div>
+          <p class="mt-4 text-sky-300 text-sm">Please make reservations 2 days prior — some exceptions can be worked out.</p>
+        </div>
+        <!-- Decorative lighthouse + waves -->
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-3xl border border-sky-400/30 shadow-2xl p-1">
+            <div class="w-full h-full rounded-[22px] glass flex items-center justify-center">
+              <svg viewBox="0 0 600 420" class="w-full h-full" role="img" aria-label="Lighthouse and ocean waves illustration">
+                <defs>
+                  <linearGradient id="sea" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#38bdf8"/>
+                    <stop offset="100%" stop-color="#0ea5e9"/>
+                  </linearGradient>
+                </defs>
+                <!-- Sun glow -->
+                <circle cx="470" cy="80" r="40" fill="#fde68a" opacity="0.2"/>
+                <!-- Waves -->
+                <g stroke="url(#sea)" stroke-width="6" fill="none" stroke-linecap="round">
+                  <path d="M20 320c40 0 40-40 80-40s40 40 80 40 40-40 80-40 40 40 80 40 40-40 80-40 40 40 80 40"/>
+                  <path d="M20 360c40 0 40-40 80-40s40 40 80 40 40-40 80-40 40 40 80 40 40-40 80-40 40 40 80 40" opacity=".7"/>
+                </g>
+                <!-- Lighthouse -->
+                <g transform="translate(260,60)">
+                  <rect x="40" y="140" width="60" height="120" fill="#f8fafc" stroke="#0b1220" stroke-width="4" rx="6"/>
+                  <rect x="30" y="110" width="80" height="40" fill="#e5e7eb" stroke="#0b1220" stroke-width="4" rx="6"/>
+                  <polygon points="40,100 100,100 90,70 50,70" fill="#ef4444" stroke="#0b1220" stroke-width="4"/>
+                  <rect x="54" y="175" width="32" height="40" fill="#0b1220" rx="3"/>
+                </g>
+                <!-- Seagulls -->
+                <g stroke="#e0f2fe" stroke-width="6" fill="none" stroke-linecap="round">
+                  <path d="M120 120c20-20 40-20 60 0"/>
+                  <path d="M420 110c20-20 40-20 60 0"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="max-w-6xl mx-auto py-16 px-6">
-    <h3 class="text-3xl font-bold text-center text-red-400 mb-10">Our Services</h3>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-[#122b44] rounded-xl shadow-xl p-6 text-center border border-blue-400">
-        <h4 class="text-xl font-semibold text-red-400 mb-3">Local Rides</h4>
-        <p class="text-blue-100">Fast and affordable rides within town and city limits.</p>
+  <section id="services" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-center">Our Services</h2>
+    <p class="text-center text-sky-200 mt-2">Coastal specialists with dependable airport transfers.</p>
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+      <div class="bg-[var(--navy-2)] border border-sky-400/20 rounded-2xl p-6">
+        <h3 class="text-xl font-semibold mb-2 text-white">Coastal Rides</h3>
+        <p class="text-sky-200">All Maine coastal towns — including rides up to the Canadian border.</p>
       </div>
-      <div class="bg-[#122b44] rounded-xl shadow-xl p-6 text-center border border-blue-400">
-        <h4 class="text-xl font-semibold text-red-400 mb-3">Airport Transfers</h4>
-        <p class="text-blue-100">On-time pick-ups and drop-offs for all major airports.</p>
+      <div class="bg-[var(--navy-2)] border border-sky-400/20 rounded-2xl p-6">
+        <h3 class="text-xl font-semibold mb-2 text-white">Airport Transfers</h3>
+        <p class="text-sky-200">Boston Logan (BOS), Portland Jetport (PWM), and Bangor International (BGR).</p>
       </div>
-      <div class="bg-[#122b44] rounded-xl shadow-xl p-6 text-center border border-blue-400">
-        <h4 class="text-xl font-semibold text-red-400 mb-3">Long Distance</h4>
-        <p class="text-blue-100">Comfortable travel for out-of-town trips and special events.</p>
+      <div class="bg-[var(--navy-2)] border border-sky-400/20 rounded-2xl p-6">
+        <h3 class="text-xl font-semibold mb-2 text-white">Local & Long Distance</h3>
+        <p class="text-sky-200">From quick local hops to comfortable long-haul trips anywhere in-state.</p>
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="bg-[#0f2236] py-16 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-bold text-red-400 mb-6">About Us</h3>
-      <p class="text-lg text-blue-100">
-        TallyHo Taxi has been proudly serving the community with safe, reliable transportation. 
-        Whether you’re catching a local ride or heading out of town, our professional drivers and well-maintained vehicles make every trip smooth and dependable.
-      </p>
+  <!-- Coverage / Notes -->
+  <section id="coverage" class="bg-[var(--navy-2)] py-16">
+    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-3 gap-8 items-start">
+      <div class="lg:col-span-2">
+        <h2 class="text-3xl sm:text-4xl font-extrabold">Where We Drive</h2>
+        <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sky-100">
+          <li class="flex items-start gap-2"><span class="text-[var(--sea)]">•</span> All Maine coastal towns</li>
+          <li class="flex items-start gap-2"><span class="text-[var(--sea)]">•</span> Rides to the Canadian border</li>
+          <li class="flex items-start gap-2"><span class="text-[var(--sea)]">•</span> Local & long distance statewide</li>
+          <li class="flex items-start gap-2"><span class="text-[var(--sea)]">•</span> Airports: BOS Logan, PWM Portland Jetport, BGR Bangor Intl.</li>
+        </ul>
+        <p class="mt-6 text-sky-300">Reservations requested <strong>2 days prior</strong> — exceptions may be possible. Call and we’ll do our best to accommodate.</p>
+      </div>
+      <aside class="space-y-4">
+        <div class="rounded-2xl border border-sky-400/20 p-5">
+          <div class="text-4xl font-extrabold text-[var(--sea)]">17<span class="text-white"> yrs</span></div>
+          <div class="text-sky-200">Experience in the industry</div>
+        </div>
+        <div class="rounded-2xl border border-sky-400/20 p-5">
+          <div class="text-white font-semibold">Safety Record</div>
+          <div class="text-sky-200">No accidents • No violations</div>
+        </div>
+        <a href="tel:18004667775" class="block text-center rounded-2xl bg-sky-500 hover:bg-sky-400 text-white font-semibold px-6 py-4">Call 1‑800‑466‑7775</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Fleet -->
+  <section id="fleet" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-center">Our Fleet</h2>
+    <p class="text-center text-sky-200 mt-2">Clean, comfortable vehicles ready for Maine weather.</p>
+    <div class="mt-8 max-w-4xl mx-auto">
+      <!-- Replace the src below with your vehicle image file path -->
+      <img src="vehicle.jpg" alt="TallyHo Taxi SUV" class="w-full rounded-2xl border border-sky-400/20 shadow-2xl" />
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto py-16 px-6">
-    <h3 class="text-3xl font-bold text-center text-red-400 mb-10">Contact Us</h3>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-[#122b44] shadow-xl rounded-xl p-6 border border-blue-400">
-        <h4 class="text-xl font-semibold text-red-400 mb-4">Call Us</h4>
-        <p class="text-lg font-bold text-blue-200">📞 (555) 123-4567</p>
+  <section id="contact" class="bg-[var(--navy-2)] py-16">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold">Contact</h2>
+        <p class="mt-2 text-sky-200">Have a question or need a quote? Give us a call.</p>
+        <div class="mt-6 flex flex-col gap-3">
+          <a href="tel:18004667775" class="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-[var(--beacon)] hover:bg-red-500 text-white font-semibold w-fit">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 12.73 12.73 0 003.99.64 1 1 0 011 1V21a1 1 0 01-1 1A18 18 0 013 4a1 1 0 011-1h3.42a1 1 0 011 1 12.73 12.73 0 00.64 3.99 1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
+            1‑800‑466‑7775
+          </a>
+          <p class="text-sky-300 text-sm">Reservations requested 2 days prior • Exceptions may be possible</p>
+        </div>
       </div>
-      <div class="bg-[#122b44] shadow-xl rounded-xl p-6 border border-blue-400">
-        <h4 class="text-xl font-semibold text-red-400 mb-4">Email Us</h4>
-        <p class="text-lg font-bold text-blue-200">✉️ ride@tallyhotaxi.com</p>
+      <div class="rounded-2xl border border-sky-400/20 p-6">
+        <h3 class="font-semibold text-white">Notes</h3>
+        <ul class="mt-3 space-y-2 text-sky-200 text-sm">
+          <li>• Proudly serving Maine</li>
+          <li>• Specializing in coastal routes & airport transfers</li>
+          <li>• Local and long distance</li>
+          <li>• All Maine coastal towns + Canadian border rides</li>
+          <li>• Airports: BOS, PWM, BGR</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#0a1a2a] border-t border-blue-400 text-center py-6 text-blue-200">
-    <p>© 2025 TallyHo Taxi. All rights reserved.</p>
+  <footer class="border-t border-sky-400/10 py-8">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-sky-300 text-sm">
+      <p>© <span id="y"></span> TallyHo Taxi. All rights reserved.</p>
+      <p>Made for phones first • Fast • Accessible</p>
+    </div>
   </footer>
 
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
