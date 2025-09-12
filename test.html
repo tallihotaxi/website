@@ -1,0 +1,72 @@
+<!-- Header / Nav -->
+<header class="sticky top-0 z-40 bg-[var(--navy)]/70 backdrop-blur border-b border-sky-400/10">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <!-- Replaced with banner.png -->
+      <div class="w-32 h-auto">
+        <img src="banner.png" alt="TallyHo Taxi Logo" class="h-12 object-contain" />
+      </div>
+      <div class="leading-tight">
+        <div class="logo-script text-2xl text-white">TallyHo Taxi</div>
+        <div class="text-sky-300 text-xs tracking-wide">Coastal Rides • Airport Transfers</div>
+      </div>
+    </div>
+    <nav class="hidden sm:flex items-center gap-6 text-sky-100">
+      <a href="#services" class="hover:text-white">Services</a>
+      <a href="#coverage" class="hover:text-white">Coverage</a>
+      <a href="#fleet" class="hover:text-white">Fleet</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-sky-900/40 to-sky-700/10 pointer-events-none"></div>
+  <div class="max-w-6xl mx-auto px-4 py-16 sm:py-24 relative">
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight"><span class="text-white">Ride the Coast with</span> <span class="logo-script text-[var(--sea)]">TallyHo Taxi</span></h1>
+        <p class="mt-4 text-lg text-sky-200">17 years of safe, reliable transportation across Maine — from local hops to scenic coastal drives and stress-free airport transfers.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="tel:12073071605" class="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-[var(--beacon)] hover:bg-red-500 text-white font-semibold shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 12.73 12.73 0 003.99.64 1 1 0 011 1V21a1 1 0 01-1 1A18 18 0 013 4a1 1 0 011-1h3.42a1 1 0 011 1 12.73 12.73 0 00.64 3.99 1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
+            Call Now: 1-207-307-1605
+          </a>
+          <span class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl border border-sky-400/40 text-sky-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.546 4.758L18.5 7.5l-3.954 2.742L13.546 15 12 10.242 10.454 15l-1-4.758L5.5 7.5l4.954-.742L12 2z"/></svg>
+            No accidents • No violations
+          </span>
+        </div>
+        <p class="mt-4 text-sky-300 text-sm">Please make reservations 2 days prior — some exceptions can be worked out.</p>
+      </div>
+      <!-- Decorative waves + seagulls + squarelogo.png -->
+      <div class="relative">
+        <div class="aspect-[4/3] rounded-3xl border border-sky-400/30 shadow-2xl p-1">
+          <div class="w-full h-full rounded-[22px] glass flex items-center justify-center relative">
+            <!-- Waves & Seagulls background -->
+            <svg viewBox="0 0 600 420" class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true">
+              <defs>
+                <linearGradient id="sea" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#38bdf8"/>
+                  <stop offset="100%" stop-color="#0ea5e9"/>
+                </linearGradient>
+              </defs>
+              <circle cx="470" cy="80" r="40" fill="#fde68a" opacity="0.2"/>
+              <g stroke="url(#sea)" stroke-width="6" fill="none" stroke-linecap="round">
+                <path d="M20 320c40 0 40-40 80-40s40 40 80 40 40-40 80-40 40 40 80 40 40-40 80-40 40 40 80 40"/>
+                <path d="M20 360c40 0 40-40 80-40s40 40 80 40 40-40 80-40 40 40 80 40 40-40 80-40 40 40 80 40" opacity=".7"/>
+              </g>
+              <g stroke="#e0f2fe" stroke-width="6" fill="none" stroke-linecap="round">
+                <path d="M120 120c20-20 40-20 60 0"/>
+                <path d="M420 110c20-20 40-20 60 0"/>
+              </g>
+            </svg>
+            <!-- Square logo in center -->
+            <img src="squarelogo.png" alt="TallyHo Taxi Logo" class="relative z-10 max-h-40 rounded-xl shadow-lg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
