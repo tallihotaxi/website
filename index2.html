@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,24 +12,45 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{
-      --navy:#0a1a2a;
-      --navy-2:#0f2236;
-      --sea:#67e8f9;
-      --sea-2:#93c5fd;
-      --foam:#ffffff;
-      --beacon:#ef4444;
+      --navy:#0a1a2a;       /* deep ocean */
+      --navy-2:#0f2236;     /* card bg */
+      --sea:#67e8f9;        /* accent aqua */
+      --sea-2:#93c5fd;      /* soft blue */
+      --foam:#ffffff;       /* white */
+      --beacon:#ef4444;     /* lighthouse red */
     }
     body{font-family: 'Outfit', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;}
     .logo-script{font-family:'Pacifico', cursive}
     .glass{backdrop-filter:saturate(140%) blur(8px); background:rgba(13,31,51,.6)}
   </style>
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "TalliHo Taxi",
+    "areaServed": "Maine, USA",
+    "telephone": "+1-207-307-1605",
+    "url": "https://example.com",
+    "description": "Coastal rides and airport transfers. 17 years experience. Serving local and long distance, all Maine coastal towns, and airports including Boston Logan, Portland Jetport, and Bangor International.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Coastal Rides"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Airport Transfers"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Local & Long Distance"}}
+      ]
+    }
+  }
+  </script>
 </head>
 <body class="bg-[var(--navy)] text-white">
   <!-- Top Bar -->
   <div class="w-full bg-[var(--navy)]/90 border-b border-sky-400/20">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-2 text-sm text-sky-200">
       <p>Proud to serve the great state of Maine!</p>
-      <a href="tel:12073071605" class="inline-flex items-center gap-2 font-semibold text-white px-3 py-1 rounded-xl bg-sky-500 hover:bg-sky-400">
+      <a href="tel:12073071605" class="inline-flex items-center gap-2 font-semibold text-white px-3 py-1 rounded-xl bg-sky-500 hover:bg-sky-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-300">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 12.73 12.73 0 003.99.64 1 1 0 011 1V21a1 1 0 01-1 1A18 18 0 013 4a1 1 0 011-1h3.42a1 1 0 011 1 12.73 12.73 0 00.64 3.99 1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
         <span>Call 1‑207‑307‑1605</span>
       </a>
@@ -39,10 +61,20 @@
   <header class="sticky top-0 z-40 bg-[var(--navy)]/70 backdrop-blur border-b border-sky-400/10">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
+        <!-- Recreated SVG Logo -->
         <div class="relative w-12 h-12">
           <svg viewBox="0 0 120 120" class="absolute inset-0" aria-hidden="true">
+            <!-- Waves -->
             <path d="M5 85c10 0 10-10 20-10s10 10 20 10 10-10 20-10 10 10 20 10 10-10 20-10" stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round"/>
             <path d="M5 95c10 0 10-10 20-10s10 10 20 10 10-10 20-10 10 10 20 10 10-10 20-10" stroke="#e0f2fe" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <!-- Lighthouse Base -->
+            <g transform="translate(50,22)">
+              <rect x="6" y="32" width="12" height="26" fill="#f3f4f6" stroke="#0b1220" stroke-width="2"/>
+              <path d="M12 0 L22 10 L12 20 L2 10 Z" fill="#ef4444" stroke="#0b1220" stroke-width="2"/>
+              <rect x="4" y="10" width="16" height="12" rx="2" fill="#e5e7eb" stroke="#0b1220" stroke-width="2"/>
+              <circle cx="12" cy="16" r="3" fill="#0b1220"/>
+            </g>
+            <!-- Seagulls -->
             <path d="M18 40c6-6 12-6 18 0M84 36c6-6 12-6 18 0" stroke="#e0f2fe" stroke-width="3" fill="none" stroke-linecap="round"/>
           </svg>
         </div>
@@ -54,6 +86,7 @@
       <nav class="hidden sm:flex items-center gap-6 text-sky-100">
         <a href="#services" class="hover:text-white">Services</a>
         <a href="#coverage" class="hover:text-white">Coverage</a>
+        <a href="#fleet" class="hover:text-white">Fleet</a>
         <a href="#contact" class="hover:text-white">Contact</a>
       </nav>
     </div>
@@ -79,11 +112,37 @@
           </div>
           <p class="mt-4 text-sky-300 text-sm">Please make reservations 2 days prior — some exceptions can be worked out.</p>
         </div>
-        <!-- Vehicle Image -->
+        <!-- Decorative lighthouse + waves -->
         <div class="relative">
           <div class="aspect-[4/3] rounded-3xl border border-sky-400/30 shadow-2xl p-1">
             <div class="w-full h-full rounded-[22px] glass flex items-center justify-center">
-              <img src="vehicle.png" alt="TalliHo Taxi Vehicle" class="rounded-2xl max-h-full object-contain">
+              <svg viewBox="0 0 600 420" class="w-full h-full" role="img" aria-label="Lighthouse and ocean waves illustration">
+                <defs>
+                  <linearGradient id="sea" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#38bdf8"/>
+                    <stop offset="100%" stop-color="#0ea5e9"/>
+                  </linearGradient>
+                </defs>
+                <!-- Sun glow -->
+                <circle cx="470" cy="80" r="40" fill="#fde68a" opacity="0.2"/>
+                <!-- Waves -->
+                <g stroke="url(#sea)" stroke-width="6" fill="none" stroke-linecap="round">
+                  <path d="M20 320c40 0 40-40 80-40s40 40 80 40 40-40 80-40 40 40 80 40 40-40 80-40 40 40 80 40"/>
+                  <path d="M20 360c40 0 40-40 80-40s40 40 80 40 40-40 80-40 40 40 80 40 40-40 80-40 40 40 80 40" opacity=".7"/>
+                </g>
+                <!-- Lighthouse -->
+                <g transform="translate(260,60)">
+                  <rect x="40" y="140" width="60" height="120" fill="#f8fafc" stroke="#0b1220" stroke-width="4" rx="6"/>
+                  <rect x="30" y="110" width="80" height="40" fill="#e5e7eb" stroke="#0b1220" stroke-width="4" rx="6"/>
+                  <polygon points="40,100 100,100 90,70 50,70" fill="#ef4444" stroke="#0b1220" stroke-width="4"/>
+                  <rect x="54" y="175" width="32" height="40" fill="#0b1220" rx="3"/>
+                </g>
+                <!-- Seagulls -->
+                <g stroke="#e0f2fe" stroke-width="6" fill="none" stroke-linecap="round">
+                  <path d="M120 120c20-20 40-20 60 0"/>
+                  <path d="M420 110c20-20 40-20 60 0"/>
+                </g>
+              </svg>
             </div>
           </div>
         </div>
@@ -135,6 +194,16 @@
         </div>
         <a href="tel:12073071605" class="block text-center rounded-2xl bg-sky-500 hover:bg-sky-400 text-white font-semibold px-6 py-4">Call 1‑207‑307‑1605</a>
       </aside>
+    </div>
+  </section>
+
+  <!-- Fleet -->
+  <section id="fleet" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-center">Our Fleet</h2>
+    <p class="text-center text-sky-200 mt-2">Clean, comfortable vehicles ready for Maine weather.</p>
+    <div class="mt-8 max-w-4xl mx-auto">
+      <!-- Replace the src below with your vehicle image file path -->
+      <img src="vehicle.png" alt="TalliHo Taxi SUV" class="w-full rounded-2xl border border-sky-400/20 shadow-2xl" />
     </div>
   </section>
 
