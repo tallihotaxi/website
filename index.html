@@ -22,13 +22,35 @@
     .logo-script{font-family:'Pacifico', cursive}
     .glass{backdrop-filter:saturate(140%) blur(8px); background:rgba(13,31,51,.6)}
   </style>
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "TalliHo Taxi",
+    "areaServed": "Maine, USA",
+    "telephone": "+1-207-307-1605",
+    "url": "https://example.com",
+    "description": "Coastal rides and airport transfers. 17 years experience. Serving local and long distance, all Maine coastal towns, and airports including Boston Logan, Portland Jetport, and Bangor International.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Coastal Rides"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Airport Transfers"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Local & Long Distance"}}
+      ]
+    }
+  }
+  </script>
 </head>
 <body class="bg-[var(--navy)] text-white">
   <!-- Top Bar -->
   <div class="w-full bg-[var(--navy)]/90 border-b border-sky-400/20">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-2 text-sm text-sky-200">
       <p>Proud to serve the great state of Maine!</p>
-      <a href="tel:12073071605" class="inline-flex items-center gap-2 font-semibold text-white px-3 py-1 rounded-xl bg-sky-500 hover:bg-sky-400">
+      <!-- <a href="tel:12073071605" class="inline-flex items-center gap-2 font-semibold text-white px-3 py-1 rounded-xl bg-sky-500 hover:bg-sky-400"> -->
+      <a href="tel:12073071605" class="inline-flex items-center gap-2 font-semibold text-white px-3 py-1 rounded-xl bg-sky-500 hover:bg-sky-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-300">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 12.73 12.73 0 003.99.64 1 1 0 011 1V21a1 1 0 01-1 1A18 18 0 013 4a1 1 0 011-1h3.42a1 1 0 011 1 12.73 12.73 0 00.64 3.99 1 1 0 01-.24 1.02l-2.2 2.2z"/></svg>
         <span>Call 1‑207‑307‑1605</span>
       </a>
@@ -41,8 +63,17 @@
       <div class="flex items-center gap-3">
         <div class="relative w-12 h-12">
           <svg viewBox="0 0 120 120" class="absolute inset-0" aria-hidden="true">
+            <!-- Waves -->
             <path d="M5 85c10 0 10-10 20-10s10 10 20 10 10-10 20-10 10 10 20 10 10-10 20-10" stroke="#7dd3fc" stroke-width="4" fill="none" stroke-linecap="round"/>
             <path d="M5 95c10 0 10-10 20-10s10 10 20 10 10-10 20-10 10 10 20 10 10-10 20-10" stroke="#e0f2fe" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <!-- Lighthouse Base -->
+            <g transform="translate(50,22)">
+              <rect x="6" y="32" width="12" height="26" fill="#f3f4f6" stroke="#0b1220" stroke-width="2"/>
+              <path d="M12 0 L22 10 L12 20 L2 10 Z" fill="#ef4444" stroke="#0b1220" stroke-width="2"/>
+              <rect x="4" y="10" width="16" height="12" rx="2" fill="#e5e7eb" stroke="#0b1220" stroke-width="2"/>
+              <circle cx="12" cy="16" r="3" fill="#0b1220"/>
+            </g>
+            <!-- Seagulls -->
             <path d="M18 40c6-6 12-6 18 0M84 36c6-6 12-6 18 0" stroke="#e0f2fe" stroke-width="3" fill="none" stroke-linecap="round"/>
           </svg>
         </div>
